@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(2, 5, 46);
+            color: aliceblue;
+            font-family: Arial, sans-serif;
+            position: relative; /* Ensure relative positioning for circles */
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(98, 25, 165);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: rgb(241, 16, 223);
+        }
+        .left {
+            color: aliceblue;
+            font-size: larger;
+        }
+
+        .second-top {
+            max-width: 80%;
+            margin: 20px auto;
+            font-size: 1.5rem;
+            text-align: center;
+            color: aliceblue;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .grey-top {
+            color: rgb(28, 139, 158);
+        }
+
+        .second {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 80%;
+            font-size: 1.4rem;
+            color: aliceblue;
+            border: 2px solid rgba(28, 139, 158, 0.5);
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .second:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .grey {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .blue a {
+            color: aliceblue;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .blue a:hover {
+            color: rgb(241, 16, 223);
+        }
+
+        #myButton {
+            width: 100px;
+            height: 50px;
+            background-color: purple;
+            border: none;
+            box-shadow: 0 0 10px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 15px;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #myButton:hover {
+            transform: scale(1.1);
+            background-color: rgb(128, 0, 128);
+        }
+
+        /* Circle animation */
+        .circle {
+            position: absolute;
+            background-color: rgb(110, 29, 100);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 30px rgba(194, 174, 194, 0.5);
+            animation: float 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .circle:nth-child(1) {
+            left: 10%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            left: 50%;
+            top: 60%;
+            animation-delay: 1s;
+        }
+
+        .circle:nth-child(3) {
+            left: 80%;
+            top: 40%;
+            animation-delay: 2s;
+        }
+
+        .circle:nth-child(4) {
+            left: 30%;
+            top: 50%;
+            animation-delay: 0.5s;
+        }
+
+        .circle:nth-child(5) {
+            left: 70%;
+            top: 30%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Iframe styling */
+        #myFrame {
+            display: none;
+            width: 500px;
+            height: 430px;
+            margin: 20px auto;
+            border: 2px solid purple;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Prabhav's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="Home1.html">Home</a></li>
+                    <li><a href="About1.html">About & Skills</a></li>
+                    <li><a href="Project main1.html">Personal Projects</a></li>
+                    <li><a href="Contact1.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="second-top">
+            <span class="grey-top">--Ways to Reach Me--</span>
+            <h1>Contact Details</h1>
+        </section>
+        <section class="second">
+            <span class="grey">Contact Number:</span>
+            <span class="blue">7303025805</span>
+        </section>
+        <section class="second">
+            <span class="grey">Email:</span>
+            <span class="blue"><a href="mailto:prabhavs2004@gmail.com">Email me</a></span>
+        </section>
+        <section class="second">
+            <span class="grey">LinkedIn Profile:</span>
+            <span class="blue"><a href="https://www.linkedin.com/in/prabhav-sharma-6b3ba8263/" target="_blank">LinkedIn</a></span>
+        </section>
+        <section class="second">
+            <span class="grey">Instagram ID:</span>
+            <span class="blue"><a href="https://www.instagram.com/prabhav_sharma_/" target="_blank">Instagram</a></span>
+        </section>
+    </main>
+
+    <!-- Floating circles -->
+    <div class="circle" style="left: 10%; top: 20%;"></div>
+    <div class="circle" style="left: 50%; top: 60%;"></div>
+    <div class="circle" style="left: 80%; top: 40%;"></div>
+    <div class="circle" style="left: 30%; top: 50%;"></div>
+    <div class="circle" style="left: 70%; top: 30%;"></div>
+
+    <!-- Button to toggle iframe -->
+    <button id="myButton">ChattyBot</button>
+
+    <!-- Iframe (hidden by default) -->
+    <iframe id="myFrame" width="500" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/3bb031ec-d025-4f5d-845e-4360dcba888f"></iframe>
+
+    <script>
+        document.getElementById("myButton").onclick = function() {
+            var frame = document.getElementById("myFrame");
+            if (frame.style.display === "none") {
+                frame.style.display = "block";
+                window.scrollBy(0, 100); // Scroll down by 100 pixels
+            } else {
+                frame.style.display = "none"; // Hide the iframe
+            }
+        }
+    </script>
+
+</body>
+</html>
